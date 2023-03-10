@@ -22,6 +22,14 @@
 		339CF36729A492E800437E54 /* ArrivalTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36529A492E800437E54 /* ArrivalTimeView.swift */; };
 		339CF36929A4933B00437E54 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36829A4933B00437E54 /* LocationService.swift */; };
 		339CF36B29A4934100437E54 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36A29A4934100437E54 /* Status.swift */; };
+		33B78B1B29BB4F38005595CE /* BusStopViewMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B1A29BB4F38005595CE /* BusStopViewMVVM.swift */; };
+		33B78B1D29BB4F8A005595CE /* BusStopRowMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B1C29BB4F8A005595CE /* BusStopRowMVVM.swift */; };
+		33B78B1F29BB4FE5005595CE /* BusStopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B1E29BB4FE5005595CE /* BusStopViewModel.swift */; };
+		33B78B2429BB5299005595CE /* ArrivalTimeViewMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2129BB5299005595CE /* ArrivalTimeViewMVVM.swift */; };
+		33B78B2529BB5299005595CE /* ArrivalTimeRowMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2229BB5299005595CE /* ArrivalTimeRowMVVM.swift */; };
+		33B78B2629BB5299005595CE /* ArrivalTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2329BB5299005595CE /* ArrivalTimeViewModel.swift */; };
+		33B78B2929BB5300005595CE /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2729BB5300005595CE /* Networkable.swift */; };
+		33B78B2A29BB5300005595CE /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2829BB5300005595CE /* NetworkManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,14 @@
 		339CF36529A492E800437E54 /* ArrivalTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeView.swift; sourceTree = "<group>"; };
 		339CF36829A4933B00437E54 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		339CF36A29A4934100437E54 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		33B78B1A29BB4F38005595CE /* BusStopViewMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopViewMVVM.swift; sourceTree = "<group>"; };
+		33B78B1C29BB4F8A005595CE /* BusStopRowMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopRowMVVM.swift; sourceTree = "<group>"; };
+		33B78B1E29BB4FE5005595CE /* BusStopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewModel.swift; sourceTree = "<group>"; };
+		33B78B2129BB5299005595CE /* ArrivalTimeViewMVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeViewMVVM.swift; sourceTree = "<group>"; };
+		33B78B2229BB5299005595CE /* ArrivalTimeRowMVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeRowMVVM.swift; sourceTree = "<group>"; };
+		33B78B2329BB5299005595CE /* ArrivalTimeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeViewModel.swift; sourceTree = "<group>"; };
+		33B78B2729BB5300005595CE /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		33B78B2829BB5300005595CE /* NetworkManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 			children = (
 				339CF36C29A4954C00437E54 /* Store */,
 				339CF35D29A4929E00437E54 /* View */,
+				33B78B1829BB4ECA005595CE /* MVVM - View */,
 				339CF35A29A48EB200437E54 /* Domain */,
 				339CF35129A48E9200437E54 /* API */,
 				339CF36829A4933B00437E54 /* LocationService.swift */,
@@ -97,6 +114,8 @@
 		339CF35129A48E9200437E54 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				33B78B2729BB5300005595CE /* Networkable.swift */,
+				33B78B2829BB5300005595CE /* NetworkManger.swift */,
 				339CF35329A48EA200437E54 /* APIError.swift */,
 				339CF35529A48EA200437E54 /* Endpoints.swift */,
 			);
@@ -145,6 +164,35 @@
 				332871BE29B88CC4007AF0F9 /* Effects.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		33B78B1829BB4ECA005595CE /* MVVM - View */ = {
+			isa = PBXGroup;
+			children = (
+				33B78B2029BB4FEE005595CE /* ArrivalTimeMVVM */,
+				33B78B1929BB4EE1005595CE /* BusStopMVVM */,
+			);
+			path = "MVVM - View";
+			sourceTree = "<group>";
+		};
+		33B78B1929BB4EE1005595CE /* BusStopMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				33B78B1A29BB4F38005595CE /* BusStopViewMVVM.swift */,
+				33B78B1C29BB4F8A005595CE /* BusStopRowMVVM.swift */,
+				33B78B1E29BB4FE5005595CE /* BusStopViewModel.swift */,
+			);
+			path = BusStopMVVM;
+			sourceTree = "<group>";
+		};
+		33B78B2029BB4FEE005595CE /* ArrivalTimeMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				33B78B2229BB5299005595CE /* ArrivalTimeRowMVVM.swift */,
+				33B78B2129BB5299005595CE /* ArrivalTimeViewMVVM.swift */,
+				33B78B2329BB5299005595CE /* ArrivalTimeViewModel.swift */,
+			);
+			path = ArrivalTimeMVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,15 +272,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				339CF35729A48EA200437E54 /* APIError.swift in Sources */,
+				33B78B2629BB5299005595CE /* ArrivalTimeViewModel.swift in Sources */,
 				339CF35C29A48ECE00437E54 /* BusStop.swift in Sources */,
 				339CF36729A492E800437E54 /* ArrivalTimeView.swift in Sources */,
+				33B78B2929BB5300005595CE /* Networkable.swift in Sources */,
 				332871BD29B7C629007AF0F9 /* Feature.swift in Sources */,
+				33B78B1B29BB4F38005595CE /* BusStopViewMVVM.swift in Sources */,
 				339CF36229A492C000437E54 /* BusStopRow.swift in Sources */,
 				339CF36629A492E800437E54 /* ArrivalTimeRow.swift in Sources */,
 				332871BF29B88CC4007AF0F9 /* Effects.swift in Sources */,
+				33B78B2A29BB5300005595CE /* NetworkManger.swift in Sources */,
 				339CF35929A48EA200437E54 /* Endpoints.swift in Sources */,
 				339CF36B29A4934100437E54 /* Status.swift in Sources */,
 				339CF34429A48CFB00437E54 /* BusTimes_TCAApp.swift in Sources */,
+				33B78B2429BB5299005595CE /* ArrivalTimeViewMVVM.swift in Sources */,
+				33B78B1F29BB4FE5005595CE /* BusStopViewModel.swift in Sources */,
+				33B78B1D29BB4F8A005595CE /* BusStopRowMVVM.swift in Sources */,
+				33B78B2529BB5299005595CE /* ArrivalTimeRowMVVM.swift in Sources */,
 				339CF36929A4933B00437E54 /* LocationService.swift in Sources */,
 				339CF36129A492C000437E54 /* BusStopView.swift in Sources */,
 			);
