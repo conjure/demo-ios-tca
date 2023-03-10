@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		332871B329B74428007AF0F9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 332871B229B74428007AF0F9 /* ComposableArchitecture */; };
+		332871BD29B7C629007AF0F9 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332871BC29B7C629007AF0F9 /* Feature.swift */; };
+		332871BF29B88CC4007AF0F9 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332871BE29B88CC4007AF0F9 /* Effects.swift */; };
+		339CF34429A48CFB00437E54 /* BusTimes_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF34329A48CFB00437E54 /* BusTimes_TCAApp.swift */; };
+		339CF34829A48CFC00437E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339CF34729A48CFC00437E54 /* Assets.xcassets */; };
+		339CF34B29A48CFC00437E54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339CF34A29A48CFC00437E54 /* Preview Assets.xcassets */; };
+		339CF35729A48EA200437E54 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35329A48EA200437E54 /* APIError.swift */; };
+		339CF35929A48EA200437E54 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35529A48EA200437E54 /* Endpoints.swift */; };
+		339CF35C29A48ECE00437E54 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35B29A48ECE00437E54 /* BusStop.swift */; };
+		339CF36129A492C000437E54 /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35F29A492C000437E54 /* BusStopView.swift */; };
+		339CF36229A492C000437E54 /* BusStopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36029A492C000437E54 /* BusStopRow.swift */; };
+		339CF36629A492E800437E54 /* ArrivalTimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36429A492E800437E54 /* ArrivalTimeRow.swift */; };
+		339CF36729A492E800437E54 /* ArrivalTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36529A492E800437E54 /* ArrivalTimeView.swift */; };
+		339CF36929A4933B00437E54 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36829A4933B00437E54 /* LocationService.swift */; };
+		339CF36B29A4934100437E54 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36A29A4934100437E54 /* Status.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		332871BC29B7C629007AF0F9 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		332871BE29B88CC4007AF0F9 /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
+		339CF34029A48CFB00437E54 /* BusTimes-TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BusTimes-TCA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		339CF34329A48CFB00437E54 /* BusTimes_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimes_TCAApp.swift; sourceTree = "<group>"; };
+		339CF34729A48CFC00437E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		339CF34A29A48CFC00437E54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		339CF35329A48EA200437E54 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		339CF35529A48EA200437E54 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		339CF35B29A48ECE00437E54 /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		339CF35F29A492C000437E54 /* BusStopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopView.swift; sourceTree = "<group>"; };
+		339CF36029A492C000437E54 /* BusStopRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopRow.swift; sourceTree = "<group>"; };
+		339CF36429A492E800437E54 /* ArrivalTimeRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeRow.swift; sourceTree = "<group>"; };
+		339CF36529A492E800437E54 /* ArrivalTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeView.swift; sourceTree = "<group>"; };
+		339CF36829A4933B00437E54 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		339CF36A29A4934100437E54 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		339CF33D29A48CFB00437E54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332871B329B74428007AF0F9 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		339CF33729A48CFB00437E54 = {
+			isa = PBXGroup;
+			children = (
+				339CF34229A48CFB00437E54 /* BusTimes-TCA */,
+				339CF34129A48CFB00437E54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		339CF34129A48CFB00437E54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				339CF34029A48CFB00437E54 /* BusTimes-TCA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		339CF34229A48CFB00437E54 /* BusTimes-TCA */ = {
+			isa = PBXGroup;
+			children = (
+				339CF36C29A4954C00437E54 /* Store */,
+				339CF35D29A4929E00437E54 /* View */,
+				339CF35A29A48EB200437E54 /* Domain */,
+				339CF35129A48E9200437E54 /* API */,
+				339CF36829A4933B00437E54 /* LocationService.swift */,
+				339CF36A29A4934100437E54 /* Status.swift */,
+				339CF34329A48CFB00437E54 /* BusTimes_TCAApp.swift */,
+				339CF34729A48CFC00437E54 /* Assets.xcassets */,
+				339CF34929A48CFC00437E54 /* Preview Content */,
+			);
+			path = "BusTimes-TCA";
+			sourceTree = "<group>";
+		};
+		339CF34929A48CFC00437E54 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				339CF34A29A48CFC00437E54 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		339CF35129A48E9200437E54 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				339CF35329A48EA200437E54 /* APIError.swift */,
+				339CF35529A48EA200437E54 /* Endpoints.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		339CF35A29A48EB200437E54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				339CF35B29A48ECE00437E54 /* BusStop.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		339CF35D29A4929E00437E54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				339CF36329A492C900437E54 /* ArrivalTimeView */,
+				339CF35E29A492AC00437E54 /* BusStopView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		339CF35E29A492AC00437E54 /* BusStopView */ = {
+			isa = PBXGroup;
+			children = (
+				339CF36029A492C000437E54 /* BusStopRow.swift */,
+				339CF35F29A492C000437E54 /* BusStopView.swift */,
+			);
+			path = BusStopView;
+			sourceTree = "<group>";
+		};
+		339CF36329A492C900437E54 /* ArrivalTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				339CF36429A492E800437E54 /* ArrivalTimeRow.swift */,
+				339CF36529A492E800437E54 /* ArrivalTimeView.swift */,
+			);
+			path = ArrivalTimeView;
+			sourceTree = "<group>";
+		};
+		339CF36C29A4954C00437E54 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				332871BC29B7C629007AF0F9 /* Feature.swift */,
+				332871BE29B88CC4007AF0F9 /* Effects.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		339CF33F29A48CFB00437E54 /* BusTimes-TCA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 339CF34E29A48CFC00437E54 /* Build configuration list for PBXNativeTarget "BusTimes-TCA" */;
+			buildPhases = (
+				339CF33C29A48CFB00437E54 /* Sources */,
+				339CF33D29A48CFB00437E54 /* Frameworks */,
+				339CF33E29A48CFB00437E54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BusTimes-TCA";
+			packageProductDependencies = (
+				332871B229B74428007AF0F9 /* ComposableArchitecture */,
+			);
+			productName = "BusTimes-TCA";
+			productReference = 339CF34029A48CFB00437E54 /* BusTimes-TCA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		339CF33829A48CFB00437E54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					339CF33F29A48CFB00437E54 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 339CF33B29A48CFB00437E54 /* Build configuration list for PBXProject "BusTimes-TCA" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 339CF33729A48CFB00437E54;
+			packageReferences = (
+				332871B129B74428007AF0F9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = 339CF34129A48CFB00437E54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				339CF33F29A48CFB00437E54 /* BusTimes-TCA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		339CF33E29A48CFB00437E54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339CF34B29A48CFC00437E54 /* Preview Assets.xcassets in Resources */,
+				339CF34829A48CFC00437E54 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		339CF33C29A48CFB00437E54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339CF35729A48EA200437E54 /* APIError.swift in Sources */,
+				339CF35C29A48ECE00437E54 /* BusStop.swift in Sources */,
+				339CF36729A492E800437E54 /* ArrivalTimeView.swift in Sources */,
+				332871BD29B7C629007AF0F9 /* Feature.swift in Sources */,
+				339CF36229A492C000437E54 /* BusStopRow.swift in Sources */,
+				339CF36629A492E800437E54 /* ArrivalTimeRow.swift in Sources */,
+				332871BF29B88CC4007AF0F9 /* Effects.swift in Sources */,
+				339CF35929A48EA200437E54 /* Endpoints.swift in Sources */,
+				339CF36B29A4934100437E54 /* Status.swift in Sources */,
+				339CF34429A48CFB00437E54 /* BusTimes_TCAApp.swift in Sources */,
+				339CF36929A4933B00437E54 /* LocationService.swift in Sources */,
+				339CF36129A492C000437E54 /* BusStopView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		339CF34C29A48CFC00437E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		339CF34D29A48CFC00437E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		339CF34F29A48CFC00437E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusTimes-TCA/Preview Content\"";
+				DEVELOPMENT_TEAM = 64R63CKBG6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to use your location services, please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to use your location services, please.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.conjure.BusTimes-TCA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		339CF35029A48CFC00437E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusTimes-TCA/Preview Content\"";
+				DEVELOPMENT_TEAM = 64R63CKBG6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to use your location services, please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to use your location services, please.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.conjure.BusTimes-TCA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		339CF33B29A48CFB00437E54 /* Build configuration list for PBXProject "BusTimes-TCA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339CF34C29A48CFC00437E54 /* Debug */,
+				339CF34D29A48CFC00437E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		339CF34E29A48CFC00437E54 /* Build configuration list for PBXNativeTarget "BusTimes-TCA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339CF34F29A48CFC00437E54 /* Debug */,
+				339CF35029A48CFC00437E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		332871B129B74428007AF0F9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		332871B229B74428007AF0F9 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 332871B129B74428007AF0F9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 339CF33829A48CFB00437E54 /* Project object */;
+}
