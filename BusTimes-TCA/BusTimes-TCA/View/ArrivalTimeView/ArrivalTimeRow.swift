@@ -40,7 +40,7 @@ struct ArriveTimeRow: View {
                 .frame(width: screenWidth - 10)
                 .background(Color.accentColor)
         }.padding(.top, 4)
-        .background(Color.white)
+            .background(Color.white)
     }
 }
 

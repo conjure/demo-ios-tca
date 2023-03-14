@@ -48,8 +48,6 @@ extension BusStopEndpoint: Endpoint {
             return []
         }
     }
-    
-    
 }
 
 extension Endpoint {
@@ -62,4 +60,3 @@ extension Endpoint {
         return url
     }
 }
-

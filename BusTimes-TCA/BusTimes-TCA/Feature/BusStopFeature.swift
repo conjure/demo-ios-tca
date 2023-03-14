@@ -12,7 +12,8 @@ import ComposableCoreLocation
 
 struct BusStopFeature: ReducerProtocol {    
     @Dependency(\.locationManager) var locationManager
-   
+    @Dependency(\.networkManager) var networkManager
+    
     struct State: Equatable {
         var listOfBusStops: [BusStop] = []
         var isFetching = false
@@ -21,7 +22,7 @@ struct BusStopFeature: ReducerProtocol {
         var alert: AlertState<Action>?
         var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
     }
-
+    
     enum Action: Equatable {
         case onAppear
         case busStopResponse(TaskResult<[BusStop]>)
@@ -30,11 +31,10 @@ struct BusStopFeature: ReducerProtocol {
         case alertDismissed
         case locationManager(LocationManager.Action)
         case fetchData
-        //case didChangeAuthorization
     }
     
-    @Dependency(\.networkManager) var networkManager
-
+    
+    
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
         case .locationManager(.didUpdateLocations(let locations)):
@@ -45,30 +45,30 @@ struct BusStopFeature: ReducerProtocol {
             }
         case .onAppear:
             return .merge(
-                  locationManager
+                locationManager
                     .delegate()
                     .map(Action.locationManager),
-
-                  locationManager
+                
+                locationManager
                     .requestWhenInUseAuthorization()
                     .fireAndForget(),
-                  
-                  locationManager.requestLocation()
+                
+                locationManager.requestLocation()
                     .fireAndForget()
-                )
+            )
         case .fetchData:
-                        state.isFetching = true
-                        let lat = state.coordinates.latitude
-                        let long = state.coordinates.longitude
-                        let endpoint = BusStopEndpoint.stopPoint(coordinate: (lat, long))
-                        let busStopPublisher: AnyPublisher<TravelInformation, APIError> = networkManager.fetchData(endpoint: endpoint)
+            state.isFetching = true
+            let lat = state.coordinates.latitude
+            let long = state.coordinates.longitude
+            let endpoint = BusStopEndpoint.stopPoint(coordinate: (lat, long))
+            let busStopPublisher: AnyPublisher<TravelInformation, APIError> = networkManager.fetchData(endpoint: endpoint)
             
-                        return .task {
-                            await .busStopResponse(TaskResult { try await busStopPublisher
-                                    .map({$0.stopPoints})
-                                    .eraseToAnyPublisher()
-                                .async()})
-                        }
+            return .task {
+                await .busStopResponse(TaskResult { try await busStopPublisher
+                        .map({$0.stopPoints})
+                        .eraseToAnyPublisher()
+                    .async()})
+            }
         case .busStopResponse(.success(let stops)):
             state.isFetching = false
             state.listOfBusStops = stops
@@ -89,7 +89,7 @@ struct BusStopFeature: ReducerProtocol {
         case .setSheet(isPresented: true):
             state.isSheetPresented = true
             return .none
-
+            
         case .setSheet(isPresented: false):
             state.isSheetPresented = false
             state.selectedStop = nil
@@ -98,10 +98,10 @@ struct BusStopFeature: ReducerProtocol {
             state.alert = nil
             return .none
         case .locationManager(.didChangeAuthorization(.authorizedAlways)),
-             .locationManager(.didChangeAuthorization(.authorizedWhenInUse)):
-          return locationManager
-            .requestLocation()
-            .fireAndForget()
+                .locationManager(.didChangeAuthorization(.authorizedWhenInUse)):
+            return locationManager
+                .requestLocation()
+                .fireAndForget()
         case .locationManager:
             print("Unimplemented Action - \(action)")
             return .none
