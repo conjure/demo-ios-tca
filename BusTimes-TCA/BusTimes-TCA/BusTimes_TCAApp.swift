@@ -7,6 +7,8 @@
 
 import SwiftUI
 import ComposableArchitecture
+import ComposableCoreLocation
+
 
 @main
 struct MyApp: App {
@@ -15,11 +17,12 @@ struct MyApp: App {
     WindowGroup {
         BusStopView(
         store: Store(
-          initialState: Feature.State(),
-          reducer: Feature()
+          initialState: BusStopFeature.State(),
+          reducer: BusStopFeature(networkManager: NetworkManager(), locationManager: .live)
         )
       )
      //   BusStopViewMVVM()
     }
   }
 }
+

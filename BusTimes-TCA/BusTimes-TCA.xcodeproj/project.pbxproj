@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		332871B329B74428007AF0F9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 332871B229B74428007AF0F9 /* ComposableArchitecture */; };
-		332871BD29B7C629007AF0F9 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332871BC29B7C629007AF0F9 /* Feature.swift */; };
-		332871BF29B88CC4007AF0F9 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332871BE29B88CC4007AF0F9 /* Effects.swift */; };
 		339CF34429A48CFB00437E54 /* BusTimes_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF34329A48CFB00437E54 /* BusTimes_TCAApp.swift */; };
 		339CF34829A48CFC00437E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339CF34729A48CFC00437E54 /* Assets.xcassets */; };
 		339CF34B29A48CFC00437E54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339CF34A29A48CFC00437E54 /* Preview Assets.xcassets */; };
@@ -29,12 +27,16 @@
 		33B78B2529BB5299005595CE /* ArrivalTimeRowMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2229BB5299005595CE /* ArrivalTimeRowMVVM.swift */; };
 		33B78B2629BB5299005595CE /* ArrivalTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2329BB5299005595CE /* ArrivalTimeViewModel.swift */; };
 		33B78B2929BB5300005595CE /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2729BB5300005595CE /* Networkable.swift */; };
-		33B78B2A29BB5300005595CE /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2829BB5300005595CE /* NetworkManger.swift */; };
+		33B78B2A29BB5300005595CE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B78B2829BB5300005595CE /* NetworkManager.swift */; };
+		33BE5C1D29BF318B00A23BE6 /* AnyPublisher+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE5C1C29BF318B00A23BE6 /* AnyPublisher+Async.swift */; };
+		33BE5C2029BF320C00A23BE6 /* BusStopFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE5C1F29BF320C00A23BE6 /* BusStopFeature.swift */; };
+		33BE5C2229BF322B00A23BE6 /* ArrivalTimeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE5C2129BF322B00A23BE6 /* ArrivalTimeFeature.swift */; };
+		33BE5C2529BF7B5600A23BE6 /* ComposableCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 33BE5C2429BF7B5600A23BE6 /* ComposableCoreLocation */; };
+		33BE5C2729BF899900A23BE6 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE5C2629BF899900A23BE6 /* CLLocationCoordinate2D+Equatable.swift */; };
+		33BE5C2929C038F700A23BE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE5C2829C038F700A23BE6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		332871BC29B7C629007AF0F9 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
-		332871BE29B88CC4007AF0F9 /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
 		339CF34029A48CFB00437E54 /* BusTimes-TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BusTimes-TCA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		339CF34329A48CFB00437E54 /* BusTimes_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimes_TCAApp.swift; sourceTree = "<group>"; };
 		339CF34729A48CFC00437E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,7 +57,12 @@
 		33B78B2229BB5299005595CE /* ArrivalTimeRowMVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeRowMVVM.swift; sourceTree = "<group>"; };
 		33B78B2329BB5299005595CE /* ArrivalTimeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalTimeViewModel.swift; sourceTree = "<group>"; };
 		33B78B2729BB5300005595CE /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		33B78B2829BB5300005595CE /* NetworkManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		33B78B2829BB5300005595CE /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		33BE5C1C29BF318B00A23BE6 /* AnyPublisher+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Async.swift"; sourceTree = "<group>"; };
+		33BE5C1F29BF320C00A23BE6 /* BusStopFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopFeature.swift; sourceTree = "<group>"; };
+		33BE5C2129BF322B00A23BE6 /* ArrivalTimeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeFeature.swift; sourceTree = "<group>"; };
+		33BE5C2629BF899900A23BE6 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
+		33BE5C2829C038F700A23BE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				332871B329B74428007AF0F9 /* ComposableArchitecture in Frameworks */,
+				33BE5C2529BF7B5600A23BE6 /* ComposableCoreLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +97,8 @@
 		339CF34229A48CFB00437E54 /* BusTimes-TCA */ = {
 			isa = PBXGroup;
 			children = (
-				339CF36C29A4954C00437E54 /* Store */,
+				33BE5C1E29BF319700A23BE6 /* Extensions */,
+				339CF36C29A4954C00437E54 /* Feature */,
 				339CF35D29A4929E00437E54 /* View */,
 				33B78B1829BB4ECA005595CE /* MVVM - View */,
 				339CF35A29A48EB200437E54 /* Domain */,
@@ -97,6 +106,7 @@
 				339CF36829A4933B00437E54 /* LocationService.swift */,
 				339CF36A29A4934100437E54 /* Status.swift */,
 				339CF34329A48CFB00437E54 /* BusTimes_TCAApp.swift */,
+				33BE5C2829C038F700A23BE6 /* Constants.swift */,
 				339CF34729A48CFC00437E54 /* Assets.xcassets */,
 				339CF34929A48CFC00437E54 /* Preview Content */,
 			);
@@ -115,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				33B78B2729BB5300005595CE /* Networkable.swift */,
-				33B78B2829BB5300005595CE /* NetworkManger.swift */,
+				33B78B2829BB5300005595CE /* NetworkManager.swift */,
 				339CF35329A48EA200437E54 /* APIError.swift */,
 				339CF35529A48EA200437E54 /* Endpoints.swift */,
 			);
@@ -157,13 +167,13 @@
 			path = ArrivalTimeView;
 			sourceTree = "<group>";
 		};
-		339CF36C29A4954C00437E54 /* Store */ = {
+		339CF36C29A4954C00437E54 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				332871BC29B7C629007AF0F9 /* Feature.swift */,
-				332871BE29B88CC4007AF0F9 /* Effects.swift */,
+				33BE5C2129BF322B00A23BE6 /* ArrivalTimeFeature.swift */,
+				33BE5C1F29BF320C00A23BE6 /* BusStopFeature.swift */,
 			);
-			path = Store;
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		33B78B1829BB4ECA005595CE /* MVVM - View */ = {
@@ -195,6 +205,15 @@
 			path = ArrivalTimeMVVM;
 			sourceTree = "<group>";
 		};
+		33BE5C1E29BF319700A23BE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33BE5C1C29BF318B00A23BE6 /* AnyPublisher+Async.swift */,
+				33BE5C2629BF899900A23BE6 /* CLLocationCoordinate2D+Equatable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +232,7 @@
 			name = "BusTimes-TCA";
 			packageProductDependencies = (
 				332871B229B74428007AF0F9 /* ComposableArchitecture */,
+				33BE5C2429BF7B5600A23BE6 /* ComposableCoreLocation */,
 			);
 			productName = "BusTimes-TCA";
 			productReference = 339CF34029A48CFB00437E54 /* BusTimes-TCA.app */;
@@ -244,6 +264,7 @@
 			mainGroup = 339CF33729A48CFB00437E54;
 			packageReferences = (
 				332871B129B74428007AF0F9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				33BE5C2329BF7B5600A23BE6 /* XCRemoteSwiftPackageReference "composable-core-location" */,
 			);
 			productRefGroup = 339CF34129A48CFB00437E54 /* Products */;
 			projectDirPath = "";
@@ -276,12 +297,13 @@
 				339CF35C29A48ECE00437E54 /* BusStop.swift in Sources */,
 				339CF36729A492E800437E54 /* ArrivalTimeView.swift in Sources */,
 				33B78B2929BB5300005595CE /* Networkable.swift in Sources */,
-				332871BD29B7C629007AF0F9 /* Feature.swift in Sources */,
+				33BE5C1D29BF318B00A23BE6 /* AnyPublisher+Async.swift in Sources */,
+				33BE5C2929C038F700A23BE6 /* Constants.swift in Sources */,
 				33B78B1B29BB4F38005595CE /* BusStopViewMVVM.swift in Sources */,
 				339CF36229A492C000437E54 /* BusStopRow.swift in Sources */,
 				339CF36629A492E800437E54 /* ArrivalTimeRow.swift in Sources */,
-				332871BF29B88CC4007AF0F9 /* Effects.swift in Sources */,
-				33B78B2A29BB5300005595CE /* NetworkManger.swift in Sources */,
+				33BE5C2029BF320C00A23BE6 /* BusStopFeature.swift in Sources */,
+				33B78B2A29BB5300005595CE /* NetworkManager.swift in Sources */,
 				339CF35929A48EA200437E54 /* Endpoints.swift in Sources */,
 				339CF36B29A4934100437E54 /* Status.swift in Sources */,
 				339CF34429A48CFB00437E54 /* BusTimes_TCAApp.swift in Sources */,
@@ -289,7 +311,9 @@
 				33B78B1F29BB4FE5005595CE /* BusStopViewModel.swift in Sources */,
 				33B78B1D29BB4F8A005595CE /* BusStopRowMVVM.swift in Sources */,
 				33B78B2529BB5299005595CE /* ArrivalTimeRowMVVM.swift in Sources */,
+				33BE5C2229BF322B00A23BE6 /* ArrivalTimeFeature.swift in Sources */,
 				339CF36929A4933B00437E54 /* LocationService.swift in Sources */,
+				33BE5C2729BF899900A23BE6 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				339CF36129A492C000437E54 /* BusStopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +460,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.conjure.BusTimes-TCA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,6 +494,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.conjure.BusTimes-TCA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,6 +535,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		33BE5C2329BF7B5600A23BE6 /* XCRemoteSwiftPackageReference "composable-core-location" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/composable-core-location";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -512,6 +550,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 332871B129B74428007AF0F9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		33BE5C2429BF7B5600A23BE6 /* ComposableCoreLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33BE5C2329BF7B5600A23BE6 /* XCRemoteSwiftPackageReference "composable-core-location" */;
+			productName = ComposableCoreLocation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

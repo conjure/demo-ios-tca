@@ -8,32 +8,52 @@
 import SwiftUI
 import ComposableArchitecture
 
+import SwiftUI
+import ComposableArchitecture
+
 struct BusStopView: View {
-    let store: StoreOf<Feature>
-    @State private var didSelectBusStop = false
+    let store: StoreOf<BusStopFeature>
+    
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            NavigationView {
+            NavigationStack {
                 VStack {
-                    Text("Arrival Times")
-                        .font(.system(size: 36, weight: .black))
-                        .padding(.top, 70)
-                    List {
-                        ForEach(0..<viewStore.listOfBusStops.count , id: \.self) { index in
-                            let busStop = viewStore.listOfBusStops[index]
-                            BusStopRow(busStop: busStop)
-                                .onTapGesture {
-                                    viewStore.send(.selectedBusStop(busStop))
-                                    didSelectBusStop.toggle()
+                    if viewStore.isFetching {
+                        ProgressView()
+                            .frame(maxWidth: .infinity)
+                        
+                    } else {
+                        List {
+                            ForEach(viewStore.listOfBusStops, id: \.id) { stop in
+                                Button {
+                                    viewStore.send(.selectStop(stop: stop))
+                                } label: {
+                                    BusStopRow(busStop: stop)
                                 }
+                            }
                         }
+                        .listStyle(.plain)
                     }
-                    .padding(.top, 10)
-                }.sheet(isPresented: $didSelectBusStop) {
-                    ArrivalTimeView(store: self.store)
                 }
-            }.onAppear {
-                viewStore.send(.onAppear)
+                .sheet(
+                    isPresented: viewStore.binding(
+                        get: \.isSheetPresented,
+                        send: BusStopFeature.Action.setSheet(isPresented:)
+                    )
+                ) {
+                    ArrivalTimeView(store: Store(
+                        initialState: ArrivalTimeFeature.State(),
+                        reducer: ArrivalTimeFeature(selectedBusStop: viewStore.selectedStop!, networkManager: NetworkManager())
+                    )) //TODO: Nice to have - see if we can share instance of network manager
+                }
+                .navigationTitle("Bus stops")
+                .alert(
+                    self.store.scope(state: \.alert),
+                    dismiss: .alertDismissed
+                )
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
             }
         }
     }

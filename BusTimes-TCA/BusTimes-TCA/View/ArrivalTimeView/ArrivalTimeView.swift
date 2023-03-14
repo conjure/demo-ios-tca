@@ -10,23 +10,34 @@ import ComposableArchitecture
 
 struct ArrivalTimeView: View {
     
-    let store: StoreOf<Feature>
+    let store: StoreOf<ArrivalTimeFeature>
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            VStack {
-                Text("Arrival Times")
-                    .font(.system(size: 36, weight: .black))
-                    .padding(.top, 100)
-                ScrollView(.vertical) {
-                    LazyVStack(spacing: 0) {
-                        ForEach(0..<viewStore.arrivalTimes.count, id: \.self) { i in
-                            let arrivalTime = viewStore.arrivalTimes[i]
-                            ArriveTimeRow(arrivalTime: arrivalTime)
+            NavigationStack {
+                VStack {
+                    if viewStore.isFetching {
+                        ProgressView()
+                            .frame(maxWidth: .infinity)
+                    }else {
+                        Text("Arrival Times")
+                            .font(.system(size: 36, weight: .black))
+                            .padding(.top, 100)
+                        List {
+                            ForEach(viewStore.arrivalTimes, id: \.id) { time in
+                                ArriveTimeRow(arrivalTime: time)
+                            }
                         }
+                        .listStyle(.plain)
                     }
                 }
-                .padding(.top, 10)
+                .alert(
+                    self.store.scope(state: \.alert),
+                  dismiss: .alertDismissed
+                )
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
             }
         }
     }
