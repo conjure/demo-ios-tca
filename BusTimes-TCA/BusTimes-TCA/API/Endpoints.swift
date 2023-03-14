@@ -41,8 +41,8 @@ extension BusStopEndpoint: Endpoint {
                 URLQueryItem(name: "lon", value: String(describing: coordinates.longitude)),
                 URLQueryItem(name: "stoptypes", value: "NaptanPublicBusCoachTram"),
                 URLQueryItem(name: "radius", value: "300"),
-                URLQueryItem(name: "app_id", value: "25fb89a8"),
-                URLQueryItem(name: "app_key", value: "d14564cd46a7d5cb31bc2c396038d68f")
+                URLQueryItem(name: "app_id", value: Constants.transportForLondonAppID),
+                URLQueryItem(name: "app_key", value: Constants.transportForLondonKey)
         ]
         case .arrivals:
             return []
