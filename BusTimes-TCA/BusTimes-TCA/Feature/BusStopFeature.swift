@@ -51,6 +51,9 @@ struct BusStopFeature: ReducerProtocol {
 
                   locationManager
                     .requestWhenInUseAuthorization()
+                    .fireAndForget(),
+                  
+                  locationManager.requestLocation()
                     .fireAndForget()
                 )
         case .fetchData:
@@ -99,7 +102,7 @@ struct BusStopFeature: ReducerProtocol {
           return locationManager
             .requestLocation()
             .fireAndForget()
-        default:
+        case .locationManager:
             print("Unimplemented Action - \(action)")
             return .none
         }
