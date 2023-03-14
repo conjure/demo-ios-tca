@@ -21,7 +21,6 @@ struct MyApp: App {
           reducer: BusStopFeature()
         )
       )
-     //   BusStopViewMVVM()
     }
   }
 }
