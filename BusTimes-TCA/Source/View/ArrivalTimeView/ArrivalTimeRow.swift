@@ -34,6 +34,7 @@ struct ArriveTimeRow: View {
                     Spacer()
                     Text(arrivalTime.timeInMinutes)
                         .foregroundColor(.white)
+                    
                 }
             }.padding(.bottom, 10)
                 .padding(.top, 10)

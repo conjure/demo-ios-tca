@@ -72,6 +72,7 @@ struct BusStopFeature: ReducerProtocol {
         case .busStopResponse(.success(let stops)):
             state.isFetching = false
             state.listOfBusStops = stops
+            
             return .none
         case .busStopResponse(.failure(let error)):
             state.isFetching = false

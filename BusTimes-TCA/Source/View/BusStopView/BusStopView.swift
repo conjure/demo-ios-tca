@@ -18,7 +18,6 @@ struct BusStopView: View {
                     if viewStore.isFetching {
                         ProgressView()
                             .frame(maxWidth: .infinity)
-                        
                     } else {
                         List {
                             ForEach(viewStore.listOfBusStops, id: \.id) { stop in

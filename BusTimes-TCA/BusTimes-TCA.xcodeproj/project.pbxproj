@@ -73,7 +73,7 @@
 		339CF33729A48CFB00437E54 = {
 			isa = PBXGroup;
 			children = (
-				339CF34229A48CFB00437E54 /* BusTimes-TCA */,
+				339CF34229A48CFB00437E54 /* Source */,
 				339CF34129A48CFB00437E54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		339CF34229A48CFB00437E54 /* BusTimes-TCA */ = {
+		339CF34229A48CFB00437E54 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				339CF35129A48E9200437E54 /* API */,
@@ -99,7 +99,7 @@
 				339CF34729A48CFC00437E54 /* Assets.xcassets */,
 				339CF34929A48CFC00437E54 /* Preview Content */,
 			);
-			path = "BusTimes-TCA";
+			path = Source;
 			sourceTree = "<group>";
 		};
 		339CF34929A48CFC00437E54 /* Preview Content */ = {
@@ -402,7 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BusTimes-TCA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
 				DEVELOPMENT_TEAM = 64R63CKBG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -436,7 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BusTimes-TCA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
 				DEVELOPMENT_TEAM = 64R63CKBG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

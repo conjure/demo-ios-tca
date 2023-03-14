@@ -20,20 +20,25 @@ struct ArrivalTimeView: View {
                         ProgressView()
                             .frame(maxWidth: .infinity)
                     }else {
-                        Text("Arrival Times")
-                            .font(.system(size: 36, weight: .black))
-                            .padding(.top, 100)
-                        List {
-                            ForEach(viewStore.arrivalTimes, id: \.id) { time in
-                                ArriveTimeRow(arrivalTime: time)
+                        if viewStore.state.arrivalTimes.isEmpty {
+                            Text("There is no information currently\navailable for this stop!")
+                                .font(.system(size: 18, weight: .medium))
+                                .multilineTextAlignment(.center)
+                        } else {
+                            List {
+                                ForEach(viewStore.arrivalTimes, id: \.id) { time in
+                                    ArriveTimeRow(arrivalTime: time)
+                                }
                             }
+                            .listStyle(.plain)
                         }
-                        .listStyle(.plain)
                     }
                 }
+                .navigationTitle("Arrival Times")
+
                 .alert(
                     self.store.scope(state: \.alert),
-                  dismiss: .alertDismissed
+                    dismiss: .alertDismissed
                 )
                 .onAppear {
                     viewStore.send(.onAppear)
