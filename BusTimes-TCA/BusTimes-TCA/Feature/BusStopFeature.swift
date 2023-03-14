@@ -10,9 +10,8 @@ import Combine
 import ComposableArchitecture
 import ComposableCoreLocation
 
-struct BusStopFeature: ReducerProtocol {
-    let networkManager: NetworkManager
-    let locationManager: LocationManager
+struct BusStopFeature: ReducerProtocol {    
+    @Dependency(\.locationManager) var locationManager
    
     struct State: Equatable {
         var listOfBusStops: [BusStop] = []
@@ -34,6 +33,7 @@ struct BusStopFeature: ReducerProtocol {
         //case didChangeAuthorization
     }
     
+    @Dependency(\.networkManager) var networkManager
 
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {

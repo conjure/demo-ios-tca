@@ -43,9 +43,8 @@ struct BusStopView: View {
                 ) {
                     ArrivalTimeView(store: Store(
                         initialState: ArrivalTimeFeature.State(),
-                        reducer: ArrivalTimeFeature(selectedBusStop: viewStore.selectedStop!, networkManager: NetworkManager())
-                    )) //TODO: Nice to have - see if we can share instance of network manager
-                }
+                        reducer: ArrivalTimeFeature(selectedBusStop: viewStore.selectedStop!)
+                    ))                }
                 .navigationTitle("Bus stops")
                 .alert(
                     self.store.scope(state: \.alert),

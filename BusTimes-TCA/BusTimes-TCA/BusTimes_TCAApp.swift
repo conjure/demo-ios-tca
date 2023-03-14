@@ -18,7 +18,7 @@ struct MyApp: App {
         BusStopView(
         store: Store(
           initialState: BusStopFeature.State(),
-          reducer: BusStopFeature(networkManager: NetworkManager(), locationManager: .live)
+          reducer: BusStopFeature()
         )
       )
      //   BusStopViewMVVM()

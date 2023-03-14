@@ -11,7 +11,7 @@ import ComposableArchitecture
 
 struct ArrivalTimeFeature: ReducerProtocol {
     let selectedBusStop: BusStop
-    let networkManager: NetworkManager
+    @Dependency(\.networkManager) var networkManager
     
     struct State: Equatable {
         var isFetching = false
