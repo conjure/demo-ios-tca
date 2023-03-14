@@ -23,7 +23,7 @@ class BusStopViewModel: ObservableObject {
     }
     
     func getBusTopData(with coordinates: Coordinate)  {
-        networkManager.fetchData(endpoint: .findLocalStops(using: coordinates))
+        networkManager.fetchData(endpoint: BusStopEndpoint.stopPoint(coordinate: coordinates))
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:

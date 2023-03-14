@@ -17,7 +17,7 @@ class ArrivalTimeViewModel: ObservableObject {
     
     func getBussesArivalTimes(for stop: String)  {
         
-        networkManager.fetchData(using: stop)
+        networkManager.fetchData(endpoint: BusStopEndpoint.arrivals(busStopID: stop))
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:

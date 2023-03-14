@@ -7,49 +7,59 @@
 
 import Foundation
 
-struct Endpoints {
-    let path: Path
-    let queryItems: [URLQueryItem]
+public protocol Endpoint {
+    var baseURL: String { get }
+    var path: String { get }
+    var url: URL { get }
+    var queryItems: [URLQueryItem] { get }
 }
 
-enum Path: String {
-    case stopPoint = "/Stoppoint"
-    case arrivals = "Stoppoint"
+enum BusStopEndpoint {
+    case stopPoint(coordinate: Coordinate)
+    case arrivals(busStopID: String)
 }
 
-extension Endpoints {
-    static func findLocalStops(using coordinates: Coordinate) -> Endpoints {
-        return Endpoints(
-            path: .stopPoint,
-            queryItems: [
+extension BusStopEndpoint: Endpoint {
+    var baseURL: String {
+        return "https://api.tfl.gov.uk"
+    }
+    
+    var path: String {
+        switch self {
+        case .stopPoint:
+            return "Stoppoint"
+        case .arrivals(let busStopID):
+            return "Stoppoint/\(busStopID)/" + "/Arrivals"
+        }
+    }
+    
+    var queryItems: [URLQueryItem] {
+        switch self {
+        case .stopPoint(let coordinates):
+            return [
                 URLQueryItem(name: "lat", value: String(describing: coordinates.latitude)),
                 URLQueryItem(name: "lon", value: String(describing: coordinates.longitude)),
                 URLQueryItem(name: "stoptypes", value: "NaptanPublicBusCoachTram"),
                 URLQueryItem(name: "radius", value: "300"),
                 URLQueryItem(name: "app_id", value: "25fb89a8"),
                 URLQueryItem(name: "app_key", value: "d14564cd46a7d5cb31bc2c396038d68f")
-        ])
+        ]
+        case .arrivals:
+            return []
+        }
+    }
+    
+    
+}
+
+extension Endpoint {
+    internal var url: URL {
+        var urlStr = baseURL + "/" + path
+        urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+
+        var url = URL(string: urlStr)!
+        url.append(queryItems: queryItems)
+        return url
     }
 }
 
-
-extension Endpoints {
-    static func getBusTimeToStop(with busStopID: String) -> Endpoints {
-        return Endpoints(
-            path: .arrivals,
-            queryItems: [
-                URLQueryItem(name: "", value: ""),
-        ])
-    }
-}
-
-extension Endpoints {
-    var url: URL? {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "api.tfl.gov.uk"
-        components.path = path.rawValue
-        components.queryItems = queryItems
-        return components.url
-    }
-}

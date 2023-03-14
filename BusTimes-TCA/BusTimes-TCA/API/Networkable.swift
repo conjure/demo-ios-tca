@@ -9,6 +9,5 @@ import Foundation
 import Combine
 
 protocol Networkable {
-    func fetchData<T: Decodable>(endpoint: Endpoints) -> AnyPublisher<T, APIError>
-    func fetchData<T: Decodable>(using string: String) -> AnyPublisher<T, APIError>
+    func fetchData<T: Decodable>(endpoint: Endpoint) -> AnyPublisher<T, APIError>
 }
