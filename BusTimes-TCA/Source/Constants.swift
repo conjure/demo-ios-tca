@@ -8,6 +8,7 @@
 import Foundation
 
 struct Constants {
-    static let transportForLondonKey = "d14564cd46a7d5cb31bc2c396038d68f"
-    static let transportForLondonAppID = "25fb89a8"
+    static let transportForLondonKey = "ENTER_TFL_API_KEY"
+    static let transportForLondonAppID = "ENTER_TFL_APP_ID"
 }
+
