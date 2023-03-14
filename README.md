@@ -4,3 +4,17 @@ The primary objective of this project was to acquire knowledge and insight into 
 Furthermore, the project involves the implementation of the Composable Architecture (TCA) and the Model-View-ViewModel (MVVM) to gain a better understanding of the differences between the two architectures.
 
 To run the project in the simulator utilizing the MVVM approach in the MyApp, one should uncomment the BusStopViewMVVM() class while commenting out the BusStopView() class. Conversely, to view the project utilizing TCA, one should reverse the process.
+
+
+## Requirments
+This projcect requires that you enable location services on your devices. Also you will neeed to get a Transport for Londond API id and key's from their developer's [webpage](https://api.tfl.gov.uk/). 
+
+Once yopu have the API id and key please enter them in the `Constant.swift` file in the Xcode project. 
+
+```swift
+    struct Constants {
+        static let transportForLondonKey = "ENTER_TFL_API_KEY"
+        static let transportForLondonAppID = "ENTER_TFL_API_ID"
+    }
+```
+
