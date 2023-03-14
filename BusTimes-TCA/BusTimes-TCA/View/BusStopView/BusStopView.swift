@@ -8,9 +8,6 @@
 import SwiftUI
 import ComposableArchitecture
 
-import SwiftUI
-import ComposableArchitecture
-
 struct BusStopView: View {
     let store: StoreOf<BusStopFeature>
     
