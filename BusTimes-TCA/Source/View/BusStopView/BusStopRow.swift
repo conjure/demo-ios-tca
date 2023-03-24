@@ -1,6 +1,6 @@
 //
 //  BusStopRow.swift
-//  BusTimes-MVVM
+//  BusTimes-TCA
 //
 //  Created by Ade Adegoke on 08/02/2023.
 //

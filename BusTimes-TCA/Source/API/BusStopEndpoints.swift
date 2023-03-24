@@ -42,14 +42,3 @@ extension BusStopEndpoint: Endpoint {
         }
     }
 }
-
-extension Endpoint {
-    internal var url: URL {
-        var urlStr = baseURL + "/" + path
-        urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-
-        var url = URL(string: urlStr)!
-        url.append(queryItems: queryItems)
-        return url
-    }
-}

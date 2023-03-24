@@ -12,7 +12,7 @@
 		339CF34829A48CFC00437E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339CF34729A48CFC00437E54 /* Assets.xcassets */; };
 		339CF34B29A48CFC00437E54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339CF34A29A48CFC00437E54 /* Preview Assets.xcassets */; };
 		339CF35729A48EA200437E54 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35329A48EA200437E54 /* APIError.swift */; };
-		339CF35929A48EA200437E54 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35529A48EA200437E54 /* Endpoints.swift */; };
+		339CF35929A48EA200437E54 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35529A48EA200437E54 /* Endpoint.swift */; };
 		339CF35C29A48ECE00437E54 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35B29A48ECE00437E54 /* BusStop.swift */; };
 		339CF36129A492C000437E54 /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF35F29A492C000437E54 /* BusStopView.swift */; };
 		339CF36229A492C000437E54 /* BusStopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CF36029A492C000437E54 /* BusStopRow.swift */; };
@@ -38,7 +38,7 @@
 		339CF34729A48CFC00437E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		339CF34A29A48CFC00437E54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		339CF35329A48EA200437E54 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		339CF35529A48EA200437E54 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		339CF35529A48EA200437E54 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		339CF35B29A48ECE00437E54 /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		339CF35F29A492C000437E54 /* BusStopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopView.swift; sourceTree = "<group>"; };
 		339CF36029A492C000437E54 /* BusStopRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopRow.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				33B78B2729BB5300005595CE /* Networkable.swift */,
 				33B78B2829BB5300005595CE /* NetworkManager.swift */,
 				339CF35329A48EA200437E54 /* APIError.swift */,
-				339CF35529A48EA200437E54 /* Endpoints.swift */,
+				339CF35529A48EA200437E54 /* Endpoint.swift */,
 				33BE5C2E29C0AAAC00A23BE6 /* BusStopEndpoints.swift */,
 				33BE5C3229C0ACF000A23BE6 /* Coordinates.swift */,
 			);
@@ -270,7 +270,7 @@
 				33BE5C2029BF320C00A23BE6 /* BusStopFeature.swift in Sources */,
 				33B78B2A29BB5300005595CE /* NetworkManager.swift in Sources */,
 				33BE5C3329C0ACF000A23BE6 /* Coordinates.swift in Sources */,
-				339CF35929A48EA200437E54 /* Endpoints.swift in Sources */,
+				339CF35929A48EA200437E54 /* Endpoint.swift in Sources */,
 				339CF34429A48CFB00437E54 /* BusTimes_TCAApp.swift in Sources */,
 				33BE5C2229BF322B00A23BE6 /* ArrivalTimeFeature.swift in Sources */,
 				33BE5C2729BF899900A23BE6 /* CLLocationCoordinate2D+Equatable.swift in Sources */,

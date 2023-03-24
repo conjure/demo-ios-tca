@@ -1,6 +1,6 @@
 //
 //  ArrivalTimeRow.swift
-//  BusTimes-MVVM
+//  BusTimes-TCA
 //
 //  Created by Ade Adegoke on 12/02/2023.
 //

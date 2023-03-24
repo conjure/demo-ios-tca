@@ -1,6 +1,6 @@
 //
 //  Networkable.swift
-//  BusTimes-MVVM
+//  BusTimes-TCA
 //
 //  Created by Ade Adegoke on 05/02/2023.
 //
